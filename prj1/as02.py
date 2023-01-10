@@ -10,7 +10,7 @@
 def int32_to_ip(int32):
     ip = [0, 0, 0, 0]
     for i in range(4):
-        ip[i] = (int32 // pow(256, 3 - i)) % 256
+        ip[i] = (int32 // 256 ** (3 - i)) % 256
     return f"{ip[0]}.{ip[1]}.{ip[2]}.{ip[3]}"
 
 
